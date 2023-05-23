@@ -696,3 +696,74 @@ body {
 .sw-promotion-pg {
     display: inline-block;
 }
+
+@media screen and (max-width: 1280px) {
+    .promotion .inner {
+        height: 275px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .promotion {}
+
+    .promotion .inner {
+        height: 300px;
+    }
+
+    .promotion .section-top {
+        display: block;
+    }
+
+    .promotion .sw-bt {
+        display: none;
+    }
+
+    .sw-promotion-control {
+        display: block;
+    }
+
+    /* swiper.js CSS 생성 */
+    .sw-promotion-pg .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        opacity: 0.2;
+        background-color: #000;
+    }
+
+    .sw-promotion-pg .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: #000;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .promotion .inner {
+        height: 290px;
+    }
+
+    .sw-promotion {
+        width: 50%;
+        min-width: 350px;
+    }
+
+    .sw-promotion-control {
+        margin-top: -20px;
+        z-index: 999;
+    }
+
+    .sw-promotion-pg .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        opacity: 0.3;
+        background-color: #fff;
+    }
+
+    .sw-promotion-pg .swiper-pagination-bullet-active {
+        opacity: 1;
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+    }
+}
