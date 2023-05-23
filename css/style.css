@@ -659,3 +659,40 @@ body {
         display: none;
     }
 }
+
+/* 추천이벤트 */
+.promotion {}
+
+.promotion .inner {
+    height: 345px;
+}
+
+.promotion .section-top {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.promotion-slide {
+    height: 100%;
+}
+
+.sw-promotion a {
+    display: inline-block;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.sw-promotion a img {
+    width: 100%;
+    height: auto;
+}
+
+.sw-promotion-control {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+.sw-promotion-pg {
+    display: inline-block;
+}
