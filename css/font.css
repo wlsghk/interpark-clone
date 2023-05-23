@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 @charset "utf-8";
 @import url("font.css");
 
@@ -153,6 +154,8 @@ body {
 
 .section-top .btns {
     margin: 25px 0;
+    /* inline-block 은 html 코드의 Enter 도 글자로 인식 */
+    /* 그래서 공백글자가 들어간다. */
     font-size: 0;
 }
 
@@ -183,6 +186,8 @@ body {
 }
 
 .bt-link-shop {
+    /* 만약 block 이면 width 를 주고, margin: 0 auto; */
+    /* inline-block 이므로 글자처럼 text-align:center  */
     display: inline-block;
     font-size: 16px;
     line-height: 56px;
@@ -203,11 +208,23 @@ body {
     background: url("../images/icon_linkArrow.svg") no-repeat center;
 }
 
+@media screen and (max-width: 1280px) {
+    .wrap>section {}
+
+    .section-top {}
+
+    .section-top>h2 {}
+
+    .section-top>p {}
+}
+
 @media screen and (max-width: 1024px) {
     .wrap>section {
         padding-top: 30px;
         padding-bottom: 0px;
     }
+
+    .section-top {}
 
     .section-top>h2 {
         font-size: 20px;
@@ -238,6 +255,16 @@ body {
         padding: 0 14px;
         margin-right: 5px;
     }
+}
+
+@media screen and (max-width: 760px) {
+    .wrap>section {}
+
+    .section-top {}
+
+    .section-top>h2 {}
+
+    .section-top>p {}
 }
 
 /* 플라잉 배너 */
@@ -282,6 +309,8 @@ body {
     align-items: center;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.quick-menu a {}
 
 @media screen and (max-width: 1024px) {
     .quick-menu {
@@ -348,314 +377,3 @@ body {
 }
 
 @media screen and (max-width: 1280px) {}
-
-/* 기본 레이아웃 */
-.wrap {}
-
-/* 상단 */
-.header {
-    position: relative;
-    z-index: 999999;
-    /* border-bottom: 1px solid #ebebeb; */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.header .inner {
-    padding-top: 30px;
-    height: 160px;
-}
-
-.header-left {
-    position: relative;
-    width: calc(118px + 455px + 20px);
-    height: 50px;
-
-    float: left;
-}
-
-.logo {
-    display: inline;
-    display: inline-block;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 118px;
-    height: 50px;
-    background: url("../images/logo.svg") no-repeat center;
-    background-size: contain;
-}
-
-.search {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 455px;
-    height: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    overflow: hidden;
-    padding: 0px 15px;
-}
-
-.search-text {
-    width: calc(100% - 25px);
-    height: 50px;
-    border: 0;
-    padding-right: 30px;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.search-text::placeholder {
-    color: #a2a2a2;
-    font-size: 15px;
-    font-weight: 700;
-}
-
-.search-bt {
-    border: 0;
-    width: 17px;
-    height: 17px;
-    background: url("../images/btn_search.svg") no-repeat center;
-    cursor: pointer;
-    vertical-align: -3px;
-}
-
-.search-reset {
-    position: absolute;
-    top: calc(50% - 8px);
-    right: 50px;
-    border: 0;
-    font-size: 0;
-    cursor: pointer;
-
-    width: 16px;
-    height: 16px;
-    background: url("../images/btn_searchDelete.svg") no-repeat center;
-}
-
-.header-right {
-    position: relative;
-    float: right;
-}
-
-.member-list {
-    margin-top: 17px;
-    /* padding-top: 17px; */
-    /* line-height: 50px; */
-}
-
-.member-list>li {
-    position: relative;
-    float: left;
-    margin-right: 20px;
-}
-
-.member-list>li:last-child {
-    margin-right: 0;
-}
-
-.member-list>li>a {
-    font-size: 15px;
-    color: #111;
-    font-weight: 500;
-}
-
-.icon-arrow::after {
-    display: inline-block;
-    position: relative;
-    content: "";
-    width: 8px;
-    height: 5px;
-    background: url("../images/arrow_pc.svg") no-repeat center;
-    vertical-align: 3px;
-    margin-left: 5px;
-}
-
-.mypage-bt {
-    padding-bottom: 10px;
-}
-
-.mypage-bt:hover .mypage {
-    opacity: 1;
-    visibility: visible;
-}
-
-.mypage {
-    display: block;
-    visibility: hidden;
-
-    position: absolute;
-    top: 25px;
-    right: 0;
-    background: #fff;
-    padding: 20px;
-    border-radius: 13px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-
-    opacity: 0;
-    transition: all 0s;
-}
-
-.mypage-list {}
-
-.mypage-list li {
-    margin: 10px 0;
-}
-
-.member-list li:first-child {
-    margin-top: 0;
-}
-
-.member-list li:last-child {
-    margin-bottom: 0;
-}
-
-.mypage-list li a {
-    white-space: nowrap;
-    font-size: 14px;
-}
-
-.mypage-list li a b {
-    font-weight: 500;
-}
-
-.mb-mypage {
-    display: none;
-    position: absolute;
-    top: -5px;
-    right: 10px;
-}
-
-.header-down {}
-
-.service-list {
-    display: block;
-    float: left;
-    margin-top: 30px;
-}
-
-.service-list li {
-    float: left;
-    padding-right: 23px;
-}
-
-.service-list li:last-child {
-    padding-right: 0;
-    margin-right: 15px;
-}
-
-.service-list li a {
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-    line-height: 30px;
-}
-
-.service-list li a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-}
-
-.service-menu {
-    display: block;
-    float: left;
-    margin-top: 30px;
-}
-
-.service-menu li {
-    float: left;
-}
-
-.service-menu li a {
-    display: inline-block;
-    position: relative;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-    line-height: 30px;
-    padding: 0 12px;
-}
-
-.service-menu li a::before {
-    display: block;
-    position: absolute;
-    top: calc(50% - 16px / 2);
-    left: 0;
-    content: "";
-    width: 1px;
-    height: 16px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 1024px) {
-    .header {
-        border: none;
-    }
-
-    .header .inner {
-        padding-top: 15px;
-        height: 230px;
-    }
-
-    .logo {
-        width: 77px;
-        height: 18px;
-        margin-left: 15px;
-    }
-
-    .header-left {
-        width: 100%;
-    }
-
-    .search {
-        top: 140px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .member-list {
-        display: none;
-    }
-
-    .mb-mypage {
-        display: block;
-    }
-
-    .header-down {
-        text-align: center;
-    }
-
-    .service-list {
-        display: inline-block;
-        float: none;
-        margin-top: 0px;
-    }
-
-    .service-list li {
-        padding-right: 20px;
-    }
-
-    .service-list li:last-child {
-        margin-right: 0px;
-    }
-
-    .service-list li a {
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-    .service-list li a img {
-        display: block;
-        width: 48px;
-        height: 48px;
-        margin: 0 auto;
-    }
-
-    .service-menu {
-        display: none;
-    }
-}
